@@ -58,8 +58,8 @@ install: $(OBJ)
 	mkdir -p $(ODIR)
 	$(CC) -o $(BDIR)/musa $^ $(CFLAGS) $(LIBS)
 	ln -sf $(BDIR)/musa /usr/bin/musa
-	cp assets/musa.desktop /usr/share/applications/
-	cp assets/app_icon/256.png /usr/share/pixmaps/musa.png
+	# cp assets/musa.desktop /usr/share/applications/
+	# cp assets/app_icon/256.png /usr/share/pixmaps/musa.png
 
 archlinux: $(OBJ) $(OBJ_GUI)
 	mkdir -p $(BDIR)/usr/lib/musa
@@ -68,9 +68,9 @@ archlinux: $(OBJ) $(OBJ_GUI)
 	mkdir -p $(BDIR)/usr/bin/
 	mkdir -p $(ODIR)
 	$(CC) -o $(BDIR)/usr/bin/musa $^ $(CFLAGS) $(LIBS)
-	cp -r assets/ $(BDIR)/usr/lib/musa/
-	cp assets/musa.desktop $(BDIR)/usr/share/applications/
-	cp assets/app_icon/256.png $(BDIR)/usr/share/pixmaps/musa.png
+	# cp -r assets/ $(BDIR)/usr/lib/musa/
+	# cp assets/musa.desktop $(BDIR)/usr/share/applications/
+	# cp assets/app_icon/256.png $(BDIR)/usr/share/pixmaps/musa.png
 
 .PHONY: clean
 clean:
